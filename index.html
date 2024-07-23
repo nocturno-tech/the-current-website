@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N0cturno</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        @font-face {
+            font-family: 'Iosevka';
+            src: url('/fonts/iosevka-regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Iosevka';
+            src: url('/fonts/iosevka-bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Iosevka';
+            src: url('/fonts/iosevka-italic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
+            background-color: #000000;
+            color: #c8bedf;
+            font-family: 'Iosevka', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .terminal {
+            max-width: 800px;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        .terminal::-webkit-scrollbar { /* WebKit */
+            width: 0;
+            height: 0;
+        }
+        .prompt::before {
+            content: "$ ";
+            color: #89accc;
+        }
+        .prompt {
+            color: #e6e0f5; /* Light purple for headers */
+        }
+        .output {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #89accc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <img src="images/logo.png" alt="N0cturno Logo" class="logo">
+        <div class="prompt">whoami</div>
+        <div class="output">
+            N0cturno: collapse-aware cypherpunk enjoyer (without too much of a tinfoil hat)
+        </div>
+        <div class="prompt">cat message.txt</div>
+        <div class="output">
+            Hey, no idea how you stumbled across my little site, but I happen to be
+            <a href="https://soundcloud.com/ytcracker/ytcracker-just-cruising">just cruising</a> the 'net.<br><br>
+            Resist ever-increasing surveillance, consider using open source software and,
+            if possible, switch to Unix-like OS/<a href="https://grapheneos.org">Graphene</a>.<br><br>
+            Use <a href="https://getmonero.org">Monero</a>. Take care, good luck.
+        </div>
+        <div class="prompt">grep . quotes.txt</div>
+        <div class="output">
+            "Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say." — Edward Snowden<br><br>
+            "Cryptography is the ultimate form of non-violent direct action." — Julian Assange<br><br>
+            "Most powerful is he who has himself in his own power." — Seneca
+        </div>
+        <div class="prompt">echo $CONTACT_INFO</div>
+        <div class="output">
+            Email: <a href="mailto:ping@nocturno.tech">ping@nocturno.tech</a><br>
+            SimpleX: <a href="https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2F1OwYGt-yqOfe2IyVHhxz3ohqo3aCCMjtB-8wn4X_aoY%3D%40smp11.simplex.im%2FSIEeDMEZkbsgEuLETS_k-ph32aP2GGcA%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAICqtu84xdJ8DiwXAoQhlF5r9ac6QwQ_ZOo9ZrAMueFg%3D%26srv%3D6ioorbm6i3yxmuoezrhjk6f6qgkc4syabh7m3so74xunb5nzr4pwgfqd.onion">ping</a>
+        </div>
+    </div>
+</body>
+</html>
